@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckhs4le1cq65c"]
+
+[ext_resource type="Texture2D" uid="uid://vi6j0em5q85y" path="res://icon.svg" id="1_w555g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fvyo5"]
+size = Vector2(114, 113)
+
+[node name="Player" type="CharacterBody2D"]
+motion_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_w555g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_fvyo5")
