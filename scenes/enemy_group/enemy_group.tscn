@@ -5,9 +5,13 @@
 
 [node name="EnemyGroup" type="Node2D"]
 script = ExtResource("1_812tj")
-step = 100
+size = Vector2i(10, 4)
+offset = Vector2(50, 50)
+enemy = ExtResource("2_iiiqx")
+step = 25
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 1.5
 autostart = true
 
 [node name="VisibleOnScreenNotifier2D2" type="VisibleOnScreenNotifier2D" parent="."]
@@ -15,35 +19,6 @@ position = Vector2(-61, 0)
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 position = Vector2(553, 0)
-
-[node name="Enemy" parent="." instance=ExtResource("2_iiiqx")]
-
-[node name="Enemy2" parent="." instance=ExtResource("2_iiiqx")]
-position = Vector2(58, 0)
-
-[node name="Enemy3" parent="." instance=ExtResource("2_iiiqx")]
-position = Vector2(116, 0)
-
-[node name="Enemy4" parent="." instance=ExtResource("2_iiiqx")]
-position = Vector2(171, 0)
-
-[node name="Enemy5" parent="." instance=ExtResource("2_iiiqx")]
-position = Vector2(227, 0)
-
-[node name="Enemy6" parent="." instance=ExtResource("2_iiiqx")]
-position = Vector2(281, 0)
-
-[node name="Enemy7" parent="." instance=ExtResource("2_iiiqx")]
-position = Vector2(336, 0)
-
-[node name="Enemy8" parent="." instance=ExtResource("2_iiiqx")]
-position = Vector2(389, 0)
-
-[node name="Enemy9" parent="." instance=ExtResource("2_iiiqx")]
-position = Vector2(443, 0)
-
-[node name="Enemy10" parent="." instance=ExtResource("2_iiiqx")]
-position = Vector2(495, 0)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D2" to="." method="_on_screen_exited_left"]
