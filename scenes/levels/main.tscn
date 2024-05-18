@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cgn4d5nyovjad"]
+[gd_scene load_steps=4 format=3 uid="uid://cgn4d5nyovjad"]
 
 [ext_resource type="PackedScene" uid="uid://ckhs4le1cq65c" path="res://scenes/player/player.tscn" id="1_0ddmt"]
 [ext_resource type="PackedScene" uid="uid://c606hk5ia65yn" path="res://scenes/enemy_group/enemy_group.tscn" id="2_1tfef"]
+[ext_resource type="PackedScene" uid="uid://cv08pdpx3g2g7" path="res://scenes/shield/shield.tscn" id="3_3owd2"]
 
 [node name="Main" type="Node2D"]
 
@@ -10,3 +11,15 @@ position = Vector2(574, 602)
 
 [node name="EnemyGroup" parent="." instance=ExtResource("2_1tfef")]
 position = Vector2(318, 39)
+
+[node name="Shield" parent="." instance=ExtResource("3_3owd2")]
+position = Vector2(280, 491)
+
+[node name="Shield2" parent="." instance=ExtResource("3_3owd2")]
+position = Vector2(462, 491)
+
+[node name="Shield3" parent="." instance=ExtResource("3_3owd2")]
+position = Vector2(648, 491)
+
+[node name="Shield4" parent="." instance=ExtResource("3_3owd2")]
+position = Vector2(849, 491)

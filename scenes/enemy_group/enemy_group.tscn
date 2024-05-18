@@ -10,7 +10,7 @@ offset = Vector2(50, 50)
 enemy = ExtResource("2_iiiqx")
 step = 25
 step_increase = 15
-timer_decrease = 0.25
+timer_decrease = 0.15
 bounce_limit = 3
 change_threshold = 5
 

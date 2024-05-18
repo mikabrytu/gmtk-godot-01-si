@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bk5suhg54pmie" path="res://art/ship.png" id="2_ytxc6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_30fc7"]
-radius = 39.0032
+radius = 30.0042
 
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("spawn_point")]
 motion_mode = 1
@@ -15,7 +15,7 @@ spawn_point = NodePath("Bullet Spawn Point")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(3.8147e-06, 1)
-scale = Vector2(3.365, 3.365)
+scale = Vector2(2.5, 2.5)
 texture = ExtResource("2_ytxc6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
