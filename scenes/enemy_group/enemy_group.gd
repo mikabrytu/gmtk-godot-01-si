@@ -41,8 +41,20 @@ func _advance():
 		bounce_count = 0
 	
 
+func _make_enemy_shoot():
+	var enemies = get_tree().get_nodes_in_group("enemies")
+	var done = false
+	
+	while (!done):
+		var e = enemies.pick_random()
+		if (e.can_shoot()):
+			e.shoot()
+			done = true
+	
+
 func _on_timer_timeout():
 	position.x += direction * step
+	_make_enemy_shoot()
 	
 
 func _on_screen_exited_left():

@@ -8,6 +8,10 @@ func _physics_process(delta):
 	position += direction * speed * delta
 	
 
+func set_direction(direction):
+	self.direction = direction
+	
+
 func _on_screen_exited():
 	queue_free()
 	

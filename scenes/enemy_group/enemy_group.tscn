@@ -15,7 +15,7 @@ bounce_limit = 3
 change_threshold = 5
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 1.5
 autostart = true
 
 [node name="VisibleOnScreenNotifier2D2" type="VisibleOnScreenNotifier2D" parent="."]

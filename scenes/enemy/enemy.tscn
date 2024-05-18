@@ -1,13 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://b6ljh8x4f30f6"]
+[gd_scene load_steps=5 format=3 uid="uid://b6ljh8x4f30f6"]
 
 [ext_resource type="Script" path="res://scenes/enemy/enemy.gd" id="1_3anrl"]
+[ext_resource type="PackedScene" uid="uid://df18u6spva5ak" path="res://scenes/bullet/bullet.tscn" id="2_2kfhe"]
 [ext_resource type="Texture2D" uid="uid://bmtqu3eme5ebe" path="res://art/enemy_blue.png" id="2_yg1td"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bui30"]
 radius = 22.0
 
-[node name="Enemy" type="StaticBody2D"]
+[node name="Enemy" type="StaticBody2D" groups=["enemies"]]
 script = ExtResource("1_3anrl")
+bullet = ExtResource("2_2kfhe")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 rotation = -3.14159
@@ -16,3 +18,8 @@ texture = ExtResource("2_yg1td")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_bui30")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(0, 29)
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
