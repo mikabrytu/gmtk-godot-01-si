@@ -15,6 +15,7 @@ func _ready():
 		for y in size.y:
 			var clone = enemy.instantiate()
 			clone.position = Vector2(x * offset.x, y * offset.y)
+			clone.on_killed.connect(_on_enemy_killed)
 			add_child(clone)
 	
 
@@ -28,4 +29,8 @@ func _on_screen_exited_left():
 
 func _on_screen_exited_right():
 	direction = -1
+	
+
+func _on_enemy_killed():
+	print("Enemy is killed")
 	
