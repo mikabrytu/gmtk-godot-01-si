@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://c606hk5ia65yn"]
+
+[ext_resource type="Script" path="res://scenes/enemy_group/enemy_group.gd" id="1_812tj"]
+[ext_resource type="PackedScene" uid="uid://b6ljh8x4f30f6" path="res://scenes/enemy/enemy.tscn" id="2_iiiqx"]
+
+[node name="EnemyGroup" type="Node2D"]
+script = ExtResource("1_812tj")
+step = 100
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Enemy" parent="." instance=ExtResource("2_iiiqx")]
+
+[node name="Enemy2" parent="." instance=ExtResource("2_iiiqx")]
+position = Vector2(58, 0)
+
+[node name="Enemy3" parent="." instance=ExtResource("2_iiiqx")]
+position = Vector2(116, 0)
+
+[node name="Enemy4" parent="." instance=ExtResource("2_iiiqx")]
+position = Vector2(171, 0)
+
+[node name="Enemy5" parent="." instance=ExtResource("2_iiiqx")]
+position = Vector2(227, 0)
+
+[node name="Enemy6" parent="." instance=ExtResource("2_iiiqx")]
+position = Vector2(281, 0)
+
+[node name="Enemy7" parent="." instance=ExtResource("2_iiiqx")]
+position = Vector2(336, 0)
+
+[node name="Enemy8" parent="." instance=ExtResource("2_iiiqx")]
+position = Vector2(389, 0)
+
+[node name="Enemy9" parent="." instance=ExtResource("2_iiiqx")]
+position = Vector2(443, 0)
+
+[node name="Enemy10" parent="." instance=ExtResource("2_iiiqx")]
+position = Vector2(495, 0)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
